@@ -37,7 +37,7 @@ namespace NUnitResearch.Tests
       [Test]
       public void CompareTripletsAliceWins()
       {
-
+         Assert.That(NUnitResearch.Tools.CompareTheTriplets(new string[] { "5 6 7", "3 6 10" }), Is.EqualTo("1 1"));
       }
 
       [Test]
