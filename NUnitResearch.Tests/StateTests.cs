@@ -39,8 +39,8 @@ namespace NUnitResearch.Tests
          // Setup repository
          repository = new Mock<IStateRepository>(MockBehavior.Strict);
          repository.Setup(s => s.ReadAll()).Returns(() => { return testData; });
-         //repository.Setup(s => s.Create(new State()));
-         //repository.Setup(s => s.Delete(new State()));
+         repository.Setup(s => s.ReadStateByInitials("GA")).Returns(() => new State() { Name = "GA" });
+         repository.Setup(s => s.ReadStateByInitials("ga")).Returns(() => new State() { Name = "GA" });
       }
    }
 }
